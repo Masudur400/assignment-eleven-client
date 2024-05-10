@@ -1,10 +1,10 @@
-import { FaFacebookSquare, FaHashtag, FaInstagramSquare, FaSlackHash, FaTwitter } from "react-icons/fa";
+import { FaFacebookSquare,  FaInstagramSquare, FaSlackHash, FaTwitter } from "react-icons/fa";
 
 const Footer = () => {
   return (
     <div className="border bg-gray-100">
       <div className="flex justify-around  container mx-auto p-10 ">  
-       
+
         <div>
         <p className="text-6xl font-extrabold mb-2"> <FaSlackHash></FaSlackHash></p> 
         <p>ACME School Library.<br />Providing reliable tech since 1992</p>
