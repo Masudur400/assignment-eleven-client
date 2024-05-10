@@ -76,8 +76,7 @@ const Login = () => {
     }
 
     return (
-        <div className="min-h-screen">
-            <h3 className="text-3xl">Login</h3>
+        <div className="min-h-screen"> 
             <Helmet>
                 <title>Login</title>
             </Helmet>
