@@ -33,7 +33,7 @@ const NavBar = () => {
                             {links}
                         </ul>
                     </div>
-                    <Link to='/' className="btn btn-ghost md:text-xl">School Library</Link>
+                    <Link to='/' className="btn btn-ghost md:text-2xl font-extrabold">School Library</Link>
                      
                 </div>
                 <div className="navbar-center hidden lg:flex">
@@ -49,7 +49,7 @@ const NavBar = () => {
                                 <img className="w-12 h-12 rounded-full bg-white" alt="user image" referrerPolicy="no-referrer" src={user?.photoURL}
                                 />
                             </div>
-                            <button onClick={handleLogOut} className="btn font-bold  ">Log Out</button> </div>
+                            <button onClick={handleLogOut} className="btn font-extrabold  ">Log Out</button> </div>
 
                             : <div className="flex gap-4">
                                 <Link to='/login' className="btn font-bold  ">Login</Link>

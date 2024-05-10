@@ -6,8 +6,8 @@ const Footer = () => {
       <div className="flex justify-around  container mx-auto p-10 ">  
 
         <div>
-        <p className="text-6xl font-extrabold mb-2"> <FaSlackHash></FaSlackHash></p> 
-        <p>ACME School Library.<br />Providing reliable tech since 1992</p>
+        <p className="text-6xl font-extrabold mb-2 "> <FaSlackHash></FaSlackHash></p> 
+        <p className="font-bold">ACME School Library.<br />Providing reliable tech since 1992</p>
         </div>
        
       <div>
