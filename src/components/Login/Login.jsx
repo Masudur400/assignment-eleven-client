@@ -81,7 +81,7 @@ const Login = () => {
                 <title>Login</title>
             </Helmet>
             <div  className="w-4/5 lg:w-1/3 md:w-2/3 mx-auto bg-gray-100 shadow-xl p-5 rounded-lg my-20">
-                <h2 className="text-2xl font-bold text-center text-red-500 my-3">LogIn Your Account</h2>
+                <h2 className="text-2xl font-bold text-center my-3">LogIn Your Account</h2>
                 <form onSubmit={handleLogin}>
 
 
@@ -96,7 +96,7 @@ const Login = () => {
                         </span>
                     </div>
 
-                    <input className=" rounded-md hover:bg-red-400 bg-red-500 w-full px-4 py-2 text-center font-bold text-lg text-white my-3" type="submit" value="Login" />
+                    <input className=" w-full px-4 py-2 text-center text-lg rounded-md bg-gray-500 hover:bg-gray-400 border hover:border-red-500 text-white font-bold my-3" type="submit" value="Login" />
                 </form>
 
                 <p>Do not have an account ? <Link to='/register' className="text-red-500 font-bold underline">please Register</Link></p>
