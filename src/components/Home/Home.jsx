@@ -1,8 +1,13 @@
+import Carosel from "../Slider/Carosel";
+
  
 const Home = () => {
     return (
-        <div>
-            Home
+        <div className="my-12">
+             
+            <div >
+            <Carosel></Carosel>
+            </div>
         </div>
     );
 };
