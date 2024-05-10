@@ -1,4 +1,6 @@
+import { FaArrowRight } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import PropTypes from 'prop-types';
 
  
 const Slider = ({image,text}) => {
@@ -14,14 +16,20 @@ const Slider = ({image,text}) => {
               <h1 className='text-xl md:w-2/3 mx-auto font-semibold mb-5 text-white lg:text-3xl'>
                 {text}
               </h1>
-              <br />
-              <Link to='/addBook' className='w-full  bg-green-600  font-bold px-5 py-4 mt-4 text-sm   text-white capitalize transition-colors duration-300 transform   rounded-md lg:w-auto hover:bg-gray-500 focus:outline-none  '>
-                Add Book
-              </Link>
+              <br /> 
+              <div className="flex justify-center">
+              <Link to='/addBook'><button className="flex items-center gap-2 bg-green-600 font-bold px-4 py-2 text-white rounded-md">Add Book <FaArrowRight></FaArrowRight></button></Link>
+              </div>
             </div>
           </div>
         </div>
       )
 };
+
+Slider.propTypes = {
+    image: PropTypes.backgroundImage,
+    text: PropTypes.string,
+
+}
 
 export default Slider;
