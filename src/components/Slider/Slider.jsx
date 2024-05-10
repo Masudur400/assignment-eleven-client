@@ -18,7 +18,7 @@ const Slider = ({image,text}) => {
               </h1>
               <br /> 
               <div className="flex justify-center">
-              <Link to='/addBook'><button className="flex items-center gap-2 bg-green-600 font-bold px-4 py-2 text-white rounded-md">Add Book <FaArrowRight></FaArrowRight></button></Link>
+              <Link to='/addBook'><button className="flex items-center gap-2 bg-black/70 hover:border-red-500 border-white border font-bold px-4 py-2 text-white rounded-md">Add Book <FaArrowRight></FaArrowRight></button></Link>
               </div>
             </div>
           </div>
