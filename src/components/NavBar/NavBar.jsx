@@ -7,6 +7,9 @@ const NavBar = () => {
 
     const links = <>
         <li> <NavLink to='/'>Home</NavLink></li>
+        <li> <NavLink to='/addBook'>Add Book</NavLink></li>
+        <li> <NavLink to='/allBooks'>All Books</NavLink></li>
+        <li> <NavLink to='/borrowedBooks'>Borrowed Books</NavLink></li>
         <li> <NavLink to='/profile'>Profile</NavLink></li>
          
     </>
@@ -30,7 +33,7 @@ const NavBar = () => {
                             {links}
                         </ul>
                     </div>
-                    <Link to='/' className="btn btn-ghost md:text-xl">daisyUI</Link>
+                    <Link to='/' className="btn btn-ghost md:text-xl">School Library</Link>
                      
                 </div>
                 <div className="navbar-center hidden lg:flex">

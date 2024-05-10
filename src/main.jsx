@@ -14,6 +14,9 @@ import Login from './components/Login/Login';
 import Register from './components/Register/Register';
 import Profile from './components/Profile/Profile';
 import UpdateProfile from './components/UpdateProfile/UpdateProfile';
+import AddBook from './components/AddBook/AddBook';
+import AllBooks from './components/AllBooks/AllBooks';
+import BorrowedBooks from './components/BorrowedBooks/BorrowedBooks';
 
 const router = createBrowserRouter([
   {
@@ -40,7 +43,19 @@ const router = createBrowserRouter([
       {
         path:'/updateProfile',
         element:<UpdateProfile></UpdateProfile>
-      }
+      },
+      {
+        path:'/addBook',
+        element:<AddBook></AddBook>
+      },
+      {
+        path:'/allBooks',
+        element:<AllBooks></AllBooks>
+      },
+      {
+        path:'/borrowedBooks',
+        element:<BorrowedBooks></BorrowedBooks>
+      },
     ]
   },
 ]);
