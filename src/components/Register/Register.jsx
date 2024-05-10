@@ -1,7 +1,7 @@
 import { updateProfile } from "firebase/auth";
 import { Helmet } from "react-helmet";
 import { FaRegEye, FaRegEyeSlash } from "react-icons/fa";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import useAuth from "../Hooks/useAuth";
 import { useState } from "react";
@@ -16,6 +16,7 @@ const Register = () => {
 
     const { createUser } =  useAuth()
     const navigate = useNavigate();
+    const location = useLocation();
 
     const handleRegister = e => {
         e.preventDefault();
@@ -61,7 +62,8 @@ const Register = () => {
                     })
 
                 setUserSuccess('user created successfully')
-                navigate('/')
+                // navigate('/')
+                navigate(location?.state ? location.state : '/')
             })
             .catch(error => {
                 console.error(error.message);

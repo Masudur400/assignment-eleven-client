@@ -30,8 +30,8 @@ const UpdateProfile = () => {
             <Helmet>
                 <title>UpdateProfile</title>
             </Helmet>
-            <div data-aos="zoom-in-down" className="w-4/5 lg:w-1/3 md:w-2/3 mx-auto bg-gray-100 shadow-xl p-5 rounded-lg my-20">
-                <h2 className="text-2xl font-bold text-center text-red-500 animate__animated animate__rubberBand  my-3">Update Profile</h2>
+            <div  className="w-4/5 lg:w-1/3 md:w-2/3 mx-auto bg-gray-100 shadow-xl p-5 rounded-lg my-20">
+                <h2 className="text-2xl font-bold text-center text-red-500    my-3">Update Profile</h2>
 
                 <form onSubmit={handleUpdate} >
                     <p>Name</p>
