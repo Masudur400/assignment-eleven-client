@@ -1,5 +1,6 @@
 import {  useLoaderData, useParams } from "react-router-dom";
 import SingleCategory from "../SingleCategory/SingleCategory";
+import { Helmet } from "react-helmet";
 
  
 const ShowAllCategory = () => {
@@ -10,6 +11,9 @@ const ShowAllCategory = () => {
     
     return (
         <div className="my-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-9">
+            <Helmet>
+                <title>Single Category</title>
+            </Helmet>
             {
                 filerCategory?.map(card => <SingleCategory
                      key={card._id} 

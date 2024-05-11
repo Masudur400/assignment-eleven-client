@@ -19,8 +19,7 @@ import AllBooks from './components/AllBooks/AllBooks';
 import BorrowedBooks from './components/BorrowedBooks/BorrowedBooks';
 import UpdateBook from './components/UpdateBook/UpdateBook';
 import ShowAllCategory from './components/ShowAllCategory/ShowAllCategory';
-import Details from './components/Details/Details';
-import SingleCategory from './components/SingleCategory/SingleCategory';
+import Details from './components/Details/Details'; 
 
 const router = createBrowserRouter([
   {

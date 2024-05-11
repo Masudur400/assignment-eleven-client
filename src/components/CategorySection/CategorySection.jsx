@@ -1,5 +1,5 @@
  
-import PropTypes from 'prop-types';
+import PropTypes from 'prop-types'; 
 import { Link } from 'react-router-dom';
 
 
@@ -10,6 +10,7 @@ const CategorySection = ({cate }) => {
 
     return (
         <div className='flex flex-col shadow-md p-3 rounded-md'>
+            
             <div className='flex justify-center'>
                 <img className='w-52 h-72' src={photo} alt="" />
             </div>
