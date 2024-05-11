@@ -2,7 +2,7 @@ import { FaFacebookSquare,  FaInstagramSquare, FaSlackHash, FaTwitter } from "re
 
 const Footer = () => {
   return (
-    <div className="border bg-gray-100">
+    <div className="border-t">
       <div className="flex justify-around  container mx-auto p-10 ">  
 
         <div>
