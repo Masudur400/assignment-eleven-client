@@ -1,13 +1,14 @@
 import { Helmet } from "react-helmet";
-import { useLoaderData } from "react-router-dom";
+import { useLoaderData, useNavigate } from "react-router-dom";
+import Swal from "sweetalert2";
  
 
 
 const UpdateBook = () => {
 
-    const book = useLoaderData();
-     
-    const { name, authorName,rating, category,photo } = book;
+    const navigate = useNavigate();
+    const book = useLoaderData(); 
+    const { _id, name, authorName,rating, category,photo } = book;
  
     const updateBook = e =>{
         e.preventDefault()
@@ -20,6 +21,30 @@ const UpdateBook = () => {
 
         const updateBooks = {name, authorName,rating,category,photo}  ;
         console.table(updateBooks);
+
+
+        fetch(`http://localhost:5000/books/${_id}`, {
+            method:'PUT',
+            headers:{
+                'content-type' : 'application/json'
+            },
+            body:JSON.stringify(updateBooks)
+    })
+        .then(res => res.json())
+        .then(data => {
+            console.log(data)
+            if(data.modifiedCount > 0){
+                Swal.fire({
+                    title: "Success!",
+                    text: "Update Book successfully!",
+                    icon: "success"
+                  });
+            }
+            navigate('/allBooks')
+        })
+
+
+
     }
 
     return (
@@ -28,7 +53,7 @@ const UpdateBook = () => {
                 <title>Update Card & Craft</title>
             </Helmet>
              
-            <div className="md:w-2/3 w-4/5 mx-auto shadow-lg bg-green-100 text-black mt-5 md:mt-10 p-5 rounded-lg">
+            <div className="md:w-2/3 w-4/5 mx-auto shadow-lg  text-black mt-5 md:my-10 p-5 rounded-lg">
                 <h3 className="text-lg font-bold text-center">Update a Book</h3>
                 <form
                 onSubmit={updateBook}
@@ -76,7 +101,7 @@ const UpdateBook = () => {
 
 
 
-                    <input className="w-full py-2 mb-6 font-bold hover:bg-green-400 text-white bg-green-500 mt-5" type="submit" value="Update Craft Item" />
+                    <input className=" w-full text-center px-4 py-2 rounded-md bg-gray-500 hover:bg-gray-400 border hover:border-red-500 text-white font-bold my-5"  type="submit" value="Update Book" />
 
                 </form>
             </div>

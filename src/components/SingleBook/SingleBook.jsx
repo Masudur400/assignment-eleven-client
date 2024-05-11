@@ -7,11 +7,11 @@ const SingleBook = ({ book }) => {
     const { _id,name, authorName, rating, category, photo } = book;
 
     return (
-        <div className='shadow-lg p-5 rounded-md'>
+        <div className='shadow-lg p-5 rounded-md flex flex-col'>
             <div className='flex justify-center mb-4'>
                 <img className='w-64 h-96' src={photo} alt="" />
             </div>
-            <div>
+            <div className='flex-grow'>
             <h2 className="font-bold">Name: {name}</h2>
             <h2 className="font-bold">Author Name: {authorName}</h2>
             <div className='flex justify-between'>
