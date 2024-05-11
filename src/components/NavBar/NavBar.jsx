@@ -33,7 +33,7 @@ const NavBar = () => {
                             {links}
                         </ul>
                     </div>
-                    <Link to='/' className="btn btn-ghost md:text-2xl font-extrabold">School Library</Link>
+                    <Link to='/' className="btn btn-ghost md:text-2xl font-extrabold">Books Library</Link>
                      
                 </div>
                 <div className="navbar-center hidden lg:flex">
