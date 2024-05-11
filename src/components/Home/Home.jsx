@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import Carosel from "../Slider/Carosel";
 import CategorySection from "../CategorySection/CategorySection";
+import { Helmet } from "react-helmet";
 
 
 const Home = () => {
@@ -12,11 +13,14 @@ const Home = () => {
             .then(res => res.json())
             .then(data => setCategories(data))
     }, [])
-    console.log(categories);
+    // console.log(categories);
 
 
     return (
         <div className="my-12">
+            <Helmet>
+                <title>Home</title>
+            </Helmet>
 
             <div >
                 <Carosel></Carosel>

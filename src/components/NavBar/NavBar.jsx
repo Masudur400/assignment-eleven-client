@@ -46,7 +46,7 @@ const NavBar = () => {
                         user ? <div className="flex   gap-3  ">
 
                             <div className="tooltip tooltip-bottom" data-tip={user?. displayName}>
-                                <img className="w-12 h-12 rounded-full bg-white" alt="user image" referrerPolicy="no-referrer" src={user?.photoURL}
+                                <img className="w-10 h-10 rounded-full bg-white" alt="user image" referrerPolicy="no-referrer" src={user?.photoURL}
                                 />
                             </div>
                             <button onClick={handleLogOut} className="btn font-extrabold  ">Log Out</button> </div>

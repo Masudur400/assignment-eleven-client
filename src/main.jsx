@@ -18,6 +18,9 @@ import AddBook from './components/AddBook/AddBook';
 import AllBooks from './components/AllBooks/AllBooks';
 import BorrowedBooks from './components/BorrowedBooks/BorrowedBooks';
 import UpdateBook from './components/UpdateBook/UpdateBook';
+import ShowAllCategory from './components/ShowAllCategory/ShowAllCategory';
+import Details from './components/Details/Details';
+import SingleCategory from './components/SingleCategory/SingleCategory';
 
 const router = createBrowserRouter([
   {
@@ -61,6 +64,17 @@ const router = createBrowserRouter([
         path:'/updateBook/:id',
         element:<UpdateBook></UpdateBook>,
         loader:({params})=> fetch(`http://localhost:5000/books/${params.id}`)
+      },
+      {
+        path:'/showAll/:category',
+        element:<ShowAllCategory></ShowAllCategory>, 
+        loader:()=>fetch('http://localhost:5000/books')
+      },
+       
+      {
+        path:'/details/:id',
+        element:<Details></Details>,
+        loader:()=>fetch('http://localhost:5000/books')
       }
     ]
   },
