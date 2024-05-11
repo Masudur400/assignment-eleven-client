@@ -58,8 +58,9 @@ const router = createBrowserRouter([
         element:<BorrowedBooks></BorrowedBooks>
       },
       {
-        path:'/updateBook',
-        element:<UpdateBook></UpdateBook>
+        path:'/updateBook/:id',
+        element:<UpdateBook></UpdateBook>,
+        loader:({params})=> fetch(`http://localhost:5000/books/${params.id}`)
       }
     ]
   },
