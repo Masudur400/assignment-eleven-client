@@ -18,7 +18,7 @@ const AddBook = () => {
         const category =form.category.value
         const email = user?.email
         const photo = form.photo.value
-       const  borrowedBooks = 0;
+       const  borrowedBooks = 0
         form.reset()
          
 

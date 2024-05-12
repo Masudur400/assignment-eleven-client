@@ -24,6 +24,14 @@ const navigate = useNavigate();
 
     const handleUpdate = (_id) => {
 
+        if(quantity < 1){
+            return  Swal.fire({
+                title: "error!",
+                text: "Quantity not Available !",
+                icon: "error"
+            });
+        }
+
         if(borrowedBooks > 2 ){
            return  Swal.fire({
             title: "error!",

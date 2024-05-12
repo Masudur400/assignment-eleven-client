@@ -19,7 +19,7 @@ const BorrowedBooksCard = ({ book }) => {
         if(borrowedBooks < 1 ){
            return  Swal.fire({
             title: "error!",
-            text: "No book left !",
+            text: "No book Available !",
             icon: "error"
         });
         }
