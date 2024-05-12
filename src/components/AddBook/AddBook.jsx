@@ -18,10 +18,11 @@ const AddBook = () => {
         const category =form.category.value
         const email = user?.email
         const photo = form.photo.value
+       const  borrowedBooks = 0;
         form.reset()
          
 
-        const addBook ={name,authorName,quantity,shortDescription,rating,category,email,photo}
+        const addBook ={name,authorName,borrowedBooks,quantity,shortDescription,rating,category,email,photo}
         console.table(addBook);
 
 
