@@ -9,7 +9,7 @@ const BorrowedBooks = () => {
     const {user} = useAuth();
     const allBooks = useLoaderData()
 
-    const borrowedBooks = allBooks?.filter(item => item.buyersEmail=== user?.email)
+    const borrowedBooks = allBooks?.filter(item => item.buyersEmail=== user?.email && item?.borrowedBooks > 0)
     console.log(borrowedBooks)
 
     console.log(allBooks)

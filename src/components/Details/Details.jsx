@@ -17,14 +17,14 @@ const navigate = useNavigate();
 
     const { _id, name,borrowedBooks, authorName, quantity, shortDescription, rating, category, photo } = details;
 
-    const updatedBooks = { _id, name, authorName, quantity:quantity-1,borrowedBooks:parseInt(borrowedBooks)+1, shortDescription, rating, category, photo, isSold: true ,buyersEmail:user?.email};
+    const updatedBooks = { _id, name, authorName, quantity:parseInt(quantity)-1,borrowedBooks:parseInt(borrowedBooks)+1, shortDescription, rating, category, photo, isSold: true ,buyersEmail:user?.email};
 
 
      
 
     const handleUpdate = (_id) => {
 
-        if(borrowedBooks > 3 ){
+        if(borrowedBooks > 2 ){
            return  Swal.fire({
             title: "error!",
             text: "You can not buy Book more then 3 !",
