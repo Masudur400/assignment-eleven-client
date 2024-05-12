@@ -9,7 +9,7 @@ const SingleCategory = ({card}) => {
     const { _id,name, authorName, rating, category, photo } = card;
 
     return (
-        <div className='shadow-lg p-5 rounded-md flex flex-col'>
+        <div className='shadow-lg p-5 border rounded-md flex flex-col'>
         <div className='flex justify-center mb-4'>
             <img className='w-64 h-96' src={photo} alt="" />
         </div>

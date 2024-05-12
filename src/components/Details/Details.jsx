@@ -32,7 +32,7 @@ const Details = () => {
             <div className="flex justify-between">
                 <Link to={-1}><button className="  my-5 text-center px-4 py-2 rounded-md bg-gray-500 hover:bg-gray-400 border hover:border-red-500 text-white font-bold">Back</button></Link>
                 
-                <Link ><button className="  my-5 text-center px-4 py-2 rounded-md bg-gray-500 hover:bg-gray-400 border hover:border-red-500 text-white font-bold">Buy</button></Link>
+                <Link ><button className="  my-5 text-center px-4 py-2 rounded-md bg-gray-500 hover:bg-gray-400 border hover:border-red-500 text-white font-bold">Buy Now</button></Link>
              
             </div>
             </div>
