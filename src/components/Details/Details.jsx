@@ -32,10 +32,10 @@ const navigate = useNavigate();
             });
         }
 
-        if(borrowedBooks > 2 ){
+        if(borrowedBooks > 0 ){
            return  Swal.fire({
             title: "error!",
-            text: "You can not buy Book more then 3 !",
+            text: "You can not buy Book more then 1 !",
             icon: "error"
         });
         }

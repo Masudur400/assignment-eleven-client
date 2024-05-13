@@ -65,8 +65,7 @@ const BorrowedBooksCard = ({ book }) => {
 
 
     return (
-        <div className='shadow-lg p-5 border rounded-md flex flex-col'>
-            <p className="my-2">Borrowed: {borrowedBooks}</p>
+        <div className='shadow-lg p-5 border rounded-md flex flex-col'> 
             <div className='flex justify-center mb-4'>
                 <img className='w-64 h-96' src={photo} alt="" />
             </div>
