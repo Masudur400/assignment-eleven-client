@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import Carosel from "../Slider/Carosel";
 import CategorySection from "../CategorySection/CategorySection";
 import { Helmet } from "react-helmet";
+import InstructorOfOurLibrary from "../InstructorOfOurLibrary/InstructorOfOurLibrary";
+import OurLibraryFacility from "../OurLibraryFacility/OurLibraryFacility";
 
 
 const Home = () => {
@@ -38,6 +40,12 @@ const Home = () => {
                         ></CategorySection>)
                     }
                 </div>
+            </div>
+            <div>
+                <InstructorOfOurLibrary></InstructorOfOurLibrary>
+            </div>
+            <div>
+                 <OurLibraryFacility></OurLibraryFacility>
             </div>
         </div>
     );

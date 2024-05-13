@@ -53,7 +53,7 @@ const UpdateBook = () => {
                 <title>Update Card & Craft</title>
             </Helmet>
              
-            <div className="md:w-2/3 w-4/5 mx-auto shadow-lg  text-black mt-5 md:my-10 p-5 rounded-lg">
+            <div data-aos="flip-left" className="md:w-2/3 w-4/5 mx-auto shadow-lg mt-5 md:my-10 p-5 rounded-lg">
                 <h3 className="text-lg font-bold text-center">Update a Book</h3>
                 <form
                 onSubmit={updateBook}

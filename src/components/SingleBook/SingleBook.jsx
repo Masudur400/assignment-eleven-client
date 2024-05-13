@@ -7,7 +7,7 @@ const SingleBook = ({ book }) => {
     const { _id,name, authorName, rating, category, photo } = book;
 
     return (
-        <div className='shadow-lg p-5 rounded-md flex flex-col border'>
+        <div data-aos="zoom-in" className='shadow-lg p-5 rounded-md flex flex-col border'>
             <div className='flex justify-center mb-4'>
                 <img className='w-64 h-96' src={photo} alt="" />
             </div>

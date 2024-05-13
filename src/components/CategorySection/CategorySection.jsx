@@ -9,7 +9,7 @@ const CategorySection = ({cate }) => {
     const {photo, category, shortDescription} = cate;
 
     return (
-        <div className='flex flex-col shadow-md p-3 border rounded-md'>
+        <div data-aos="zoom-in" className='flex flex-col shadow-md p-3 border rounded-md'>
             
             <div className='flex justify-center'>
                 <img className='w-52 h-72' src={photo} alt="" />

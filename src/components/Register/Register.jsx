@@ -5,6 +5,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import useAuth from "../Hooks/useAuth";
 import { useState } from "react";
+import 'animate.css';
 
 
 const Register = () => {
@@ -80,8 +81,8 @@ const Register = () => {
             <Helmet>
                 <title>Register</title>
             </Helmet>
-            <div   className="w-4/5 lg:w-1/3 md:w-2/3 mx-auto bg-gray-100 shadow-xl p-5 rounded-lg my-20">
-                <h2 className="text-2xl font-bold text-center my-3">Please Register </h2>
+            <div data-aos="zoom-in-down"  className="w-4/5 lg:w-1/3 md:w-2/3 mx-auto bg-gray-100 shadow-xl p-5 rounded-lg my-20">
+                <h2 className="text-2xl font-bold text-center my-3 animate__animated animate__rubberBand">Please Register </h2>
 
                 {
                     userSuccess && <p className="  text-green-500">{userSuccess}</p>
