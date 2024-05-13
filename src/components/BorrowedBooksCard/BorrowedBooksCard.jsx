@@ -22,27 +22,41 @@ const BorrowedBooksCard = ({ book }) => {
             text: "No book Available !",
             icon: "error"
         });
-        }
+        } 
 
-        fetch(`http://localhost:5000/books/${_id}`, {
+
+        Swal.fire({
+            title: "Are you sure?",
+            text: "Do you want to Return this Book!",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#3085d6",
+            cancelButtonColor: "#d33",
+            confirmButtonText: "Yes, delete it!"
+        }).then((result) => {
+            if (result.isConfirmed) {
+
+                fetch(`http://localhost:5000/books/${_id}`, {
             method: 'PATCH',
-            headers: {
-                'content-type': 'application/json'
-            },
-            body: JSON.stringify(updatedBooks)
-        })
-            .then(res => res.json())
-            .then(data => {
+              headers: {
+                  'content-type': 'application/json'
+             },
+             body: JSON.stringify(updatedBooks)
+          })
+              .then(res => res.json())
+               .then(data => {
                 console.log(data)
                 if (data.modifiedCount > 0) {
-                    Swal.fire({
-                        title: "Success!",
-                        text: "Return Book successfully!",
-                        icon: "success"
-                    });
-                }
-                navigate('/borrowedBooks')
-            })
+                     Swal.fire({
+                         title: "Success!",
+                         text: "Return Book successfully!",
+                         icon: "success"
+                     });
+                 }
+                 navigate('/borrowedBooks')
+              })
+            }
+        });
 
     }
 
@@ -52,13 +66,14 @@ const BorrowedBooksCard = ({ book }) => {
 
     return (
         <div className='shadow-lg p-5 border rounded-md flex flex-col'>
+            <p className="my-2">Borrowed: {borrowedBooks}</p>
             <div className='flex justify-center mb-4'>
                 <img className='w-64 h-96' src={photo} alt="" />
             </div>
             <div className='flex-grow'>
                 <h2 className="font-bold">Name: {name}</h2>
                 <h2 className="font-bold">Author Name: {authorName}</h2>
-                <p>{borrowedBooks}</p>
+                
                 <div className='flex justify-between'>
                     <h2 className="font-bold">Category: {category}</h2>
                     <h2 className="font-bold text-red-500">Rating: <span className='mx-1'>{rating}</span> Star</h2>
