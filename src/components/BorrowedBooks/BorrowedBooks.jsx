@@ -21,7 +21,7 @@ const BorrowedBooks = () => {
             <Helmet>
                 <title>Borrowed Books</title>
             </Helmet>
-            <p className="my-5 font-bold">Borrowed Books : {borrowedBooks.length}</p>
+             
              <div className="grid gap-5 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 my-10">
              {
                 borrowedBooks?.map(book =><BorrowedBooksCard key={book._id} book={book}></BorrowedBooksCard>)

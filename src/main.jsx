@@ -20,6 +20,7 @@ import BorrowedBooks from './components/BorrowedBooks/BorrowedBooks';
 import UpdateBook from './components/UpdateBook/UpdateBook';
 import ShowAllCategory from './components/ShowAllCategory/ShowAllCategory';
 import Details from './components/Details/Details'; 
+import PrivetRoute from './components/PrivetRoute/PrivetRoute';
 
 const router = createBrowserRouter([
   {
@@ -41,15 +42,21 @@ const router = createBrowserRouter([
       },
       {
         path:'/profile',
-        element:<Profile></Profile>
+        element:<PrivetRoute>
+          <Profile></Profile>
+          </PrivetRoute>
       },
       {
         path:'/updateProfile',
-        element:<UpdateProfile></UpdateProfile>
+        element:<PrivetRoute>
+          <UpdateProfile></UpdateProfile>
+        </PrivetRoute>
       },
       {
         path:'/addBook',
-        element:<AddBook></AddBook>
+        element:<PrivetRoute>
+          <AddBook></AddBook>
+        </PrivetRoute>
       },
       {
         path:'/allBooks',
@@ -57,23 +64,31 @@ const router = createBrowserRouter([
       },
       {
         path:'/borrowedBooks',
-        element:<BorrowedBooks></BorrowedBooks>,
+        element:<PrivetRoute>
+          <BorrowedBooks></BorrowedBooks>
+        </PrivetRoute>,
         loader:()=>fetch('http://localhost:5000/books')
       },
       {
         path:'/updateBook/:id',
-        element:<UpdateBook></UpdateBook>,
+        element:<PrivetRoute>
+          <UpdateBook></UpdateBook>
+        </PrivetRoute>,
         loader:({params})=> fetch(`http://localhost:5000/books/${params.id}`)
       },
       {
         path:'/showAll/:category',
-        element:<ShowAllCategory></ShowAllCategory>, 
+        element:<PrivetRoute>
+          <ShowAllCategory></ShowAllCategory>
+        </PrivetRoute>, 
         loader:()=>fetch('http://localhost:5000/books')
       },
        
       {
         path:'/details/:id',
-        element:<Details></Details>,
+        element:<PrivetRoute>
+          <Details></Details>
+        </PrivetRoute>,
         loader:()=>fetch('http://localhost:5000/books')
       }
     ]

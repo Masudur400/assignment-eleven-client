@@ -32,7 +32,7 @@ const BorrowedBooksCard = ({ book }) => {
             showCancelButton: true,
             confirmButtonColor: "#3085d6",
             cancelButtonColor: "#d33",
-            confirmButtonText: "Yes, delete it!"
+            confirmButtonText: "Yes, Return it!"
         }).then((result) => {
             if (result.isConfirmed) {
 
@@ -58,14 +58,12 @@ const BorrowedBooksCard = ({ book }) => {
             }
         });
 
-    }
-
-
-
+    } 
 
 
     return (
-        <div className='shadow-lg p-5 border rounded-md flex flex-col'> 
+        <div className='shadow-lg p-5 border rounded-md flex flex-col'>
+            <p className="my-2 bg-gray-500 w-32 text-white text-center font-bold rounded-full  p-2">Borrowed: {borrowedBooks}</p>
             <div className='flex justify-center mb-4'>
                 <img className='w-64 h-96' src={photo} alt="" />
             </div>
