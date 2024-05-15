@@ -34,9 +34,9 @@ export default function Carosel() {
                 modules={[Autoplay, Pagination, Navigation]}
                 className="mySwiper"
             >
-                <SwiperSlide> <Slider image={p3} text={'Book libraries have been essential institutions for centuries, serving as repositories of knowledge, centers of learning, and hubs of community engagement.'}></Slider></SwiperSlide>
-                <SwiperSlide> <Slider image={p2} text={'Book libraries have been essential institutions for centuries, serving as repositories of knowledge, centers of learning, and hubs of community engagement.'}></Slider></SwiperSlide>
                 <SwiperSlide> <Slider image={p1} text={'Book libraries have been essential institutions for centuries, serving as repositories of knowledge, centers of learning, and hubs of community engagement.'}></Slider></SwiperSlide>
+                <SwiperSlide> <Slider image={p2} text={'Book libraries have been essential institutions for centuries, serving as repositories of knowledge, centers of learning, and hubs of community engagement.'}></Slider></SwiperSlide>
+                <SwiperSlide> <Slider image={p3} text={'Book libraries have been essential institutions for centuries, serving as repositories of knowledge, centers of learning, and hubs of community engagement.'}></Slider></SwiperSlide>
                  
 
             </Swiper>
