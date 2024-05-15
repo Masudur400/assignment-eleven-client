@@ -1,6 +1,7 @@
 import { Link, NavLink } from "react-router-dom";
 import useAuth from "../Hooks/useAuth";
 import { useEffect, useState } from "react";
+import p2 from '../../assets/images/book-logo-2.png';
 
 const NavBar = () => {
 
@@ -52,7 +53,7 @@ const NavBar = () => {
                             {links}
                         </ul>
                     </div>
-                    <Link to='/' className="btn btn-ghost max-sm:text-xs md:text-2xl font-extrabold">Books Library</Link>
+                    <Link to='/' className="btn btn-ghost max-sm:text-xs md:text-2xl font-extrabold flex gap-2 justify-center items-center"><img className="max-sm:hidden md:w-10 md:h-10 rounded-full" src={p2} alt="" /> Books Library</Link>
 
                 </div>
                 <div className="navbar-center hidden lg:flex">
