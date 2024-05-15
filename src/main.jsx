@@ -67,21 +67,21 @@ const router = createBrowserRouter([
         element:<PrivetRoute>
           <BorrowedBooks></BorrowedBooks>
         </PrivetRoute>,
-        loader:()=>fetch('http://localhost:5000/books')
+        loader:()=>fetch('https://assignment-eleven-server-eosin.vercel.app/books')
       },
       {
         path:'/updateBook/:id',
         element:<PrivetRoute>
           <UpdateBook></UpdateBook>
         </PrivetRoute>,
-        loader:({params})=> fetch(`http://localhost:5000/books/${params.id}`)
+        loader:({params})=> fetch(`https://assignment-eleven-server-eosin.vercel.app/books/${params.id}`)
       },
       {
         path:'/showAll/:category',
         element:<PrivetRoute>
           <ShowAllCategory></ShowAllCategory>
         </PrivetRoute>, 
-        loader:()=>fetch('http://localhost:5000/books')
+        loader:()=>fetch('https://assignment-eleven-server-eosin.vercel.app/books')
       },
        
       {
@@ -89,7 +89,7 @@ const router = createBrowserRouter([
         element:<PrivetRoute>
           <Details></Details>
         </PrivetRoute>,
-        loader:()=>fetch('http://localhost:5000/books')
+        loader:()=>fetch('https://assignment-eleven-server-eosin.vercel.app/books')
       }
     ]
   },

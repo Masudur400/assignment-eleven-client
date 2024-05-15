@@ -11,7 +11,7 @@ const Home = () => {
 
     const [categories, setCategories] = useState();
     useEffect(() => {
-        fetch('http://localhost:5000/categories')
+        fetch('https://assignment-eleven-server-eosin.vercel.app/categories')
             .then(res => res.json())
             .then(data => setCategories(data))
     }, [])

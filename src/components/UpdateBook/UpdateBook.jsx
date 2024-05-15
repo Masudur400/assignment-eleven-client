@@ -23,7 +23,7 @@ const UpdateBook = () => {
         console.table(updateBooks);
 
 
-        fetch(`http://localhost:5000/books/${_id}`, {
+        fetch(`https://assignment-eleven-server-eosin.vercel.app/books/${_id}`, {
             method:'PUT',
             headers:{
                 'content-type' : 'application/json'

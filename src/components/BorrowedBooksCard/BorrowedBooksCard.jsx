@@ -36,7 +36,7 @@ const BorrowedBooksCard = ({ book }) => {
         }).then((result) => {
             if (result.isConfirmed) {
 
-                fetch(`http://localhost:5000/books/${_id}`, {
+                fetch(`https://assignment-eleven-server-eosin.vercel.app/books/${_id}`, {
             method: 'PATCH',
               headers: {
                   'content-type': 'application/json'

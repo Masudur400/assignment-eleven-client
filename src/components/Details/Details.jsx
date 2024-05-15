@@ -40,7 +40,7 @@ const navigate = useNavigate();
         });
         }
 
-        fetch(`http://localhost:5000/books/${_id}`, {
+        fetch(`https://assignment-eleven-server-eosin.vercel.app/books/${_id}`, {
             method: 'PATCH',
             headers: {
                 'content-type': 'application/json'

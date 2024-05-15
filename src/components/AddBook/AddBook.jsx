@@ -26,7 +26,7 @@ const AddBook = () => {
         console.table(addBook);
 
 
-        fetch('http://localhost:5000/books', {
+        fetch('https://assignment-eleven-server-eosin.vercel.app/books', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
