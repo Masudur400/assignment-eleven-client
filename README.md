@@ -18,3 +18,7 @@
 # links
 - server site code : https://github.com/Masudur400/books-library-server-as-11
 - Live Link : https://assignment-eleven-b07db.web.app/
+
+# Run app 
+- npm i
+- npm run dev
